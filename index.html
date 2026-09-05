@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <meta name="description" content="Adric Kam — APJ B2B Marketing, Demand Generation, ABM, Digital Media & Field Marketing Leader">
-
 <title>Adric Kam | APJ Growth, Demand & Field Marketing</title>
 
 <style>
@@ -16,17 +15,19 @@
   --muted:#647068;
   --line:#d5ddd7;
   --green:#0b4f3a;
-  --green2:#176b50;
-  --soft:#e4eee8;
+  --green-dark:#07382a;
+  --green-soft:#e4eee8;
   --coral:#c9674d;
   --coral-soft:#f2ddd5;
-  --max:1240px
+  --max:1240px;
 }
 
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
 html{
-  scroll-behavior:smooth
+  scroll-behavior:smooth;
 }
 
 body{
@@ -34,7 +35,7 @@ body{
   background:var(--bg);
   color:var(--ink);
   font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  line-height:1.6
+  line-height:1.6;
 }
 
 body:before{
@@ -43,34 +44,38 @@ body:before{
   inset:0;
   pointer-events:none;
   opacity:.2;
-  background-image:radial-gradient(#0c4933 .55px,transparent .55px);
+  background-image:radial-gradient(rgba(11,79,58,.42) .55px,transparent .55px);
   background-size:7px 7px;
   mask-image:linear-gradient(to bottom,black,transparent 72%);
-  z-index:-1
+  z-index:-1;
 }
 
 a{
   color:inherit;
-  text-decoration:none
+  text-decoration:none;
 }
 
 .wrap{
   width:min(var(--max),calc(100% - 54px));
-  margin:auto
+  margin:auto;
 }
+
+/* =========================
+   NAV
+========================= */
 
 nav{
   height:88px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  border-bottom:1px solid var(--line)
+  border-bottom:1px solid var(--line);
 }
 
 .brand{
   font-weight:950;
   letter-spacing:-.055em;
-  font-size:19px
+  font-size:19px;
 }
 
 .brand small{
@@ -78,7 +83,7 @@ nav{
   color:var(--green);
   letter-spacing:.1em;
   margin-left:7px;
-  font-size:10px
+  font-size:10px;
 }
 
 .links{
@@ -86,12 +91,20 @@ nav{
   gap:28px;
   font-size:13px;
   color:var(--muted);
-  font-weight:750
+  font-weight:750;
+}
+
+.links a{
+  transition:.2s;
 }
 
 .links a:hover{
-  color:var(--coral)
+  color:var(--coral);
 }
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
   min-height:calc(100vh - 88px);
@@ -100,7 +113,8 @@ nav{
   grid-template-columns:minmax(0,1fr) 390px;
   gap:78px;
   align-items:center;
-  position:relative
+  position:relative;
+  border-top:0;
 }
 
 .hero:after{
@@ -111,9 +125,9 @@ nav{
   font-size:clamp(130px,20vw,270px);
   font-weight:950;
   letter-spacing:-.13em;
-  color:rgba(12,73,51,.055);
+  color:rgba(11,79,58,.055);
   line-height:.8;
-  z-index:-1
+  z-index:-1;
 }
 
 .eyebrow,
@@ -122,11 +136,11 @@ nav{
   text-transform:uppercase;
   letter-spacing:.18em;
   font-weight:900;
-  color:var(--green)
+  color:var(--green);
 }
 
 .hero .eyebrow{
-  color:var(--coral)
+  color:var(--coral);
 }
 
 h1{
@@ -134,26 +148,26 @@ h1{
   line-height:.88;
   letter-spacing:-.078em;
   margin:18px 0 30px;
-  max-width:1000px
+  max-width:1000px;
 }
 
 .hero h1 em{
   font-style:normal;
-  color:var(--green)
+  color:var(--green);
 }
 
 .intro{
   font-size:20px;
   line-height:1.55;
   color:var(--muted);
-  max-width:800px
+  max-width:800px;
 }
 
 .actions{
   display:flex;
   gap:10px;
   flex-wrap:wrap;
-  margin-top:30px
+  margin-top:30px;
 }
 
 .btn{
@@ -165,24 +179,28 @@ h1{
   padding:11px 17px;
   font-size:13px;
   font-weight:850;
-  background:rgba(252,253,249,.62);
-  transition:.2s
+  background:rgba(255,254,250,.72);
+  transition:.2s;
 }
 
 .btn:hover{
   transform:translateY(-2px);
   border-color:var(--coral);
-  box-shadow:0 8px 22px rgba(201,103,77,.12)
+  box-shadow:0 8px 22px rgba(201,103,77,.12);
 }
 
 .btn.primary{
   background:var(--green);
   color:#fff;
-  border-color:var(--green)
+  border-color:var(--green);
 }
 
+/* =========================
+   PORTRAIT
+========================= */
+
 .portrait-wrap{
-  position:relative
+  position:relative;
 }
 
 .portrait{
@@ -192,7 +210,8 @@ h1{
   overflow:hidden;
   box-shadow:
     24px 28px 0 rgba(201,103,77,.16),
-    0 20px 55px rgba(11,79,58,.12)
+    0 20px 55px rgba(11,79,58,.12);
+  animation:softFloat 6s ease-in-out infinite;
 }
 
 .portrait img{
@@ -201,7 +220,7 @@ h1{
   object-fit:cover;
   object-position:center top;
   display:block;
-  filter:saturate(.86) contrast(1.03)
+  filter:saturate(.86) contrast(1.03);
 }
 
 .portrait-tag{
@@ -216,7 +235,7 @@ h1{
   font-weight:900;
   letter-spacing:.12em;
   text-transform:uppercase;
-  box-shadow:0 14px 32px rgba(201,103,77,.22)
+  box-shadow:0 14px 32px rgba(201,103,77,.22);
 }
 
 .portrait-dot{
@@ -233,51 +252,53 @@ h1{
   color:var(--green);
   font-weight:950;
   font-size:11px;
-  letter-spacing:.08em
+  letter-spacing:.08em;
 }
+
+/* =========================
+   TICKER
+========================= */
 
 .ticker{
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
   overflow:hidden;
   white-space:nowrap;
-  background:rgba(242,221,213,.55)
+  background:rgba(242,221,213,.55);
 }
 
 .ticker-track{
   display:inline-flex;
   gap:43px;
   padding:15px 0;
-  animation:marquee 26s linear infinite;
+  animation:tickerMove 26s linear infinite;
   font-size:11px;
   font-weight:900;
   letter-spacing:.15em;
   text-transform:uppercase;
-  color:var(--green)
+  color:var(--green);
 }
 
 .ticker-track span:after{
   content:"✦";
   margin-left:43px;
-  color:var(--coral)
+  color:var(--coral);
 }
 
-@keyframes marquee{
-  to{
-    transform:translateX(-50%)
-  }
-}
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 section{
   padding:108px 0;
-  border-top:1px solid var(--line)
+  border-top:1px solid var(--line);
 }
 
 .section-head{
   display:grid;
   grid-template-columns:210px 1fr;
   gap:48px;
-  margin-bottom:55px
+  margin-bottom:55px;
 }
 
 .section-head .label:after{
@@ -286,7 +307,7 @@ section{
   width:34px;
   height:2px;
   margin:0 0 3px 10px;
-  background:var(--coral)
+  background:var(--coral);
 }
 
 .section-title{
@@ -294,29 +315,23 @@ section{
   line-height:.96;
   letter-spacing:-.065em;
   margin:0;
-  max-width:930px
+  max-width:930px;
 }
 
 .summary{
   font-size:18px;
   color:var(--muted);
-  max-width:830px
+  max-width:830px;
 }
 
-.kicker{
-  color:var(--green);
-  font-weight:850
-}
-
-
-/* =========================================================
+/* =========================
    PROFILE METRICS
-   ========================================================= */
+========================= */
 
 .highlights{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
 }
 
 .highlight{
@@ -324,19 +339,13 @@ section{
   border:1px solid var(--line);
   padding:34px;
   border-radius:22px;
-  min-height:240px;
+  min-height:200px;
   position:relative;
   overflow:hidden;
   transition:
     transform .45s cubic-bezier(.2,.8,.2,1),
     box-shadow .45s ease,
-    border-color .35s ease
-}
-
-.highlight:hover{
-  transform:translateY(-8px);
-  border-color:rgba(201,103,77,.55);
-  box-shadow:0 20px 45px rgba(11,79,58,.09)
+    border-color .35s ease;
 }
 
 .highlight:after{
@@ -345,78 +354,72 @@ section{
   width:94px;
   height:94px;
   border-radius:50%;
-  background:var(--soft);
+  background:var(--green-soft);
   right:-27px;
-  bottom:-27px
+  bottom:-27px;
 }
 
+.highlight:hover{
+  transform:translateY(-8px);
+  border-color:rgba(201,103,77,.55);
+  box-shadow:0 20px 45px rgba(11,79,58,.09);
+}
 
-/* BIG NUMBER */
-
+/*
+  All four hero metrics now share the same visual system.
+*/
 .hero-number{
   display:flex !important;
   align-items:baseline !important;
-  gap:.035em !important;
+  gap:.04em !important;
   margin:0 !important;
   padding:0 !important;
-
-  font-size:clamp(5.5rem,10vw,9rem) !important;
-  line-height:.8 !important;
-  letter-spacing:-.085em !important;
-  font-weight:950 !important;
-
+  font-size:clamp(4.4rem,6.4vw,7.2rem) !important;
+  line-height:.82 !important;
+  letter-spacing:-.075em !important;
+  font-weight:900 !important;
   color:var(--green) !important;
+  white-space:nowrap;
   position:relative;
-  z-index:2
+  z-index:1;
 }
 
-.hero-number .count{
+.hero-number .count,
+.hero-number .static-number{
   display:inline-block !important;
+  font:inherit !important;
   font-size:1em !important;
-  line-height:.8 !important;
-  letter-spacing:-.085em !important;
-  font-weight:950 !important;
-  color:var(--green) !important;
-  font-variant-numeric:tabular-nums
+  line-height:inherit !important;
+  letter-spacing:inherit !important;
+  font-weight:900 !important;
+  color:inherit !important;
 }
 
 .hero-number .number-suffix{
   display:inline-block !important;
-  font-size:.5em !important;
+  font-size:.48em !important;
   line-height:1 !important;
-  font-weight:900 !important;
-  letter-spacing:-.03em !important;
-  color:var(--green) !important;
-  transform:translateY(-.08em)
+  font-weight:850 !important;
+  letter-spacing:-.04em !important;
+  transform:translateY(-.07em);
 }
 
 .highlight > span:last-child{
   display:block;
   color:var(--muted);
   font-size:12px;
-  margin-top:18px;
-  max-width:200px;
+  margin-top:15px;
+  max-width:230px;
   position:relative;
-  z-index:2
+  z-index:1;
 }
 
-.highlight > strong:not(.hero-number){
-  display:block;
-  font-size:72px;
-  letter-spacing:-.07em;
-  line-height:1;
-  color:var(--green);
-  position:relative;
-  z-index:2
-}
-
-
-/* =========================================================
+/* =========================
    EXPERIENCE
-   ========================================================= */
+========================= */
 
 .timeline{
-  border-top:1px solid var(--line)
+  border-top:1px solid var(--line);
 }
 
 .role{
@@ -428,48 +431,48 @@ section{
   transition:
     padding .25s,
     transform .45s cubic-bezier(.2,.8,.2,1),
-    border-color .35s
+    border-color .35s ease;
 }
 
 .role:hover{
   padding-left:8px;
-  border-color:rgba(201,103,77,.55)
+  border-color:rgba(201,103,77,.55);
 }
 
 .date{
   font-size:12px;
   color:var(--muted);
-  padding-top:5px
+  padding-top:5px;
 }
 
 .role h3{
   font-size:26px;
   line-height:1.15;
   margin:0;
-  letter-spacing:-.03em
+  letter-spacing:-.03em;
 }
 
 .company{
   font-weight:900;
   color:var(--green);
-  margin:7px 0 18px
+  margin:7px 0 18px;
 }
 
 .role ul{
   padding-left:20px;
   margin:0;
-  color:#414b45
+  color:#414b45;
 }
 
 .role li{
-  margin:9px 0
+  margin:9px 0;
 }
 
 .earlier{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:12px;
-  margin-top:12px
+  margin-top:12px;
 }
 
 .earlier .role{
@@ -477,21 +480,20 @@ section{
   border:1px solid var(--line);
   background:var(--paper);
   padding:24px;
-  border-radius:17px
+  border-radius:17px;
 }
 
 .earlier .role:hover{
-  padding:24px
+  padding:24px;
 }
 
-
-/* =========================================================
+/* =========================
    IMPACT
-   ========================================================= */
+========================= */
 
 .projects{
   display:grid;
-  gap:14px
+  gap:14px;
 }
 
 .project{
@@ -500,73 +502,70 @@ section{
   border-radius:22px;
   padding:34px;
   display:grid;
-  grid-template-columns:1fr 190px;
+  grid-template-columns:minmax(0,1fr) 210px;
   gap:35px;
+  overflow:hidden;
   transition:
     transform .45s cubic-bezier(.2,.8,.2,1),
     box-shadow .45s ease,
-    border-color .35s ease
+    border-color .35s ease;
 }
 
 .project:hover{
   transform:translateY(-8px);
   border-color:rgba(201,103,77,.55);
-  box-shadow:0 20px 45px rgba(11,79,58,.09)
+  box-shadow:0 20px 45px rgba(11,79,58,.09);
 }
 
 .project h3{
   font-size:27px;
   letter-spacing:-.04em;
-  margin:0 0 9px
+  margin:0 0 9px;
 }
 
 .project p{
   margin:0;
   color:var(--muted);
-  max-width:800px
+  max-width:800px;
 }
 
 .metric{
   border-left:1px solid var(--line);
   padding-left:25px;
   align-self:center;
-  opacity:0;
-  transform:translateY(28px) scale(.94);
-  transition:
-    opacity .65s cubic-bezier(.2,.8,.2,1),
-    transform .75s cubic-bezier(.2,.8,.2,1)
-}
-
-.metric.is-visible{
-  opacity:1;
-  transform:translateY(0) scale(1)
+  width:100%;
+  min-width:0;
+  overflow:hidden;
 }
 
 .metric strong{
   display:block;
-  font-size:clamp(4.5rem,8vw,8rem);
+  font-size:clamp(3.5rem,5.2vw,5.7rem);
   line-height:.86;
-  letter-spacing:-.07em;
+  letter-spacing:-.075em;
+  font-weight:900;
   color:var(--green);
-  font-weight:850
+  white-space:nowrap;
+  max-width:100%;
 }
 
 .metric span{
+  display:block;
   color:var(--muted);
   font-size:10px;
   text-transform:uppercase;
-  letter-spacing:.1em
+  letter-spacing:.1em;
+  max-width:100%;
 }
 
-
-/* =========================================================
+/* =========================
    SKILLS
-   ========================================================= */
+========================= */
 
 .skillgrid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:14px
+  gap:14px;
 }
 
 .skill{
@@ -576,61 +575,92 @@ section{
   padding:28px;
   transition:
     transform .45s cubic-bezier(.2,.8,.2,1),
-    box-shadow .45s ease
+    box-shadow .45s ease,
+    border-color .35s ease;
 }
 
 .skill:hover{
   transform:translateY(-8px);
-  box-shadow:0 20px 45px rgba(11,79,58,.09)
+  border-color:rgba(201,103,77,.55);
+  box-shadow:0 20px 45px rgba(11,79,58,.09);
 }
 
 .skill h3{
   font-size:16px;
   margin:0 0 12px;
-  color:var(--green)
+  color:var(--green);
 }
 
 .skill p{
   margin:0;
   color:var(--muted);
-  font-size:14px
+  font-size:14px;
 }
 
+/* =========================
+   EDUCATION
+========================= */
 
-/* =========================================================
+.education{
+  margin-top:18px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.edu-card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:27px;
+}
+
+.edu-card strong{
+  display:block;
+  font-size:17px;
+}
+
+.edu-card span{
+  display:block;
+  color:var(--muted);
+  font-size:13px;
+  margin-top:7px;
+}
+
+/* =========================
    CONTACT
-   ========================================================= */
+========================= */
 
 .contact{
   background:var(--green);
   color:#fff;
   border-radius:30px;
   padding:65px;
-  box-shadow:18px 20px 0 rgba(201,103,77,.13)
+  box-shadow:18px 20px 0 rgba(201,103,77,.13);
 }
 
 .contact .label{
-  color:#efb6a5
+  color:#efb6a5;
 }
 
 .contact .section-title{
-  color:#fff
+  color:#fff;
 }
 
 .contact .summary{
-  color:#d9e5de
+  color:#d9e5de;
 }
 
 .contact-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:20px;
-  margin-top:38px
+  margin-top:38px;
 }
 
 .contact-item{
   border-top:1px solid rgba(255,255,255,.25);
-  padding-top:14px
+  padding-top:14px;
 }
 
 .contact-item small{
@@ -638,19 +668,19 @@ section{
   color:#a9bfb1;
   text-transform:uppercase;
   letter-spacing:.13em;
-  font-size:9px
+  font-size:9px;
 }
 
 .contact-item a,
 .contact-item span{
   font-size:15px;
-  font-weight:800
+  font-weight:800;
 }
 
 .socials{
   display:flex;
   gap:9px;
-  margin-top:30px
+  margin-top:30px;
 }
 
 .social{
@@ -659,62 +689,30 @@ section{
   border-radius:999px;
   padding:9px 14px;
   font-size:12px;
-  font-weight:850
+  font-weight:850;
+  transition:.2s;
 }
 
 .social:hover{
   border-color:#efb6a5;
-  background:rgba(255,255,255,.08)
+  background:rgba(255,255,255,.08);
 }
 
+/* =========================
+   FOOTER
+========================= */
 
-/* =========================================================
-   EDUCATION
-   ========================================================= */
-
-.education{
-  margin-top:18px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px
-}
-
-.edu-card{
-  background:var(--paper);
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:27px
-}
-
-.edu-card strong{
-  display:block;
-  font-size:17px
-}
-
-.edu-card span{
-  display:block;
+footer{
+  padding:38px 0;
   color:var(--muted);
-  font-size:13px;
-  margin-top:7px
+  font-size:12px;
+  display:flex;
+  justify-content:space-between;
 }
 
-
-/* =========================================================
+/* =========================
    MOTION
-   ========================================================= */
-
-.reveal{
-  opacity:0;
-  transform:translateY(32px);
-  transition:
-    opacity .8s cubic-bezier(.2,.75,.2,1),
-    transform .8s cubic-bezier(.2,.75,.2,1)
-}
-
-.reveal.is-visible{
-  opacity:1;
-  transform:none
-}
+========================= */
 
 .progress-line{
   position:fixed;
@@ -724,185 +722,174 @@ section{
   width:0;
   z-index:9999;
   background:linear-gradient(90deg,var(--green),var(--coral));
-  transform-origin:left center
+  transform-origin:left center;
+}
+
+.reveal{
+  opacity:0;
+  transform:translateY(32px);
+  transition:
+    opacity .8s cubic-bezier(.2,.75,.2,1),
+    transform .8s cubic-bezier(.2,.75,.2,1);
+}
+
+.reveal.is-visible{
+  opacity:1;
+  transform:none;
 }
 
 .hero h1{
-  animation:heroIn 1s cubic-bezier(.16,1,.3,1) both
+  animation:heroIn 1s cubic-bezier(.16,1,.3,1) both;
 }
 
 .hero .eyebrow{
-  animation:heroIn .7s .08s cubic-bezier(.16,1,.3,1) both
+  animation:heroIn .7s .08s cubic-bezier(.16,1,.3,1) both;
 }
 
 .hero p{
-  animation:heroIn .8s .18s cubic-bezier(.16,1,.3,1) both
+  animation:heroIn .8s .18s cubic-bezier(.16,1,.3,1) both;
 }
 
 .hero .actions{
-  animation:heroIn .9s .28s cubic-bezier(.16,1,.3,1) both
+  animation:heroIn .9s .28s cubic-bezier(.16,1,.3,1) both;
 }
 
 @keyframes heroIn{
   from{
     opacity:0;
-    transform:translateY(26px)
+    transform:translateY(26px);
   }
   to{
     opacity:1;
-    transform:none
+    transform:none;
   }
 }
 
 @keyframes softFloat{
   0%,100%{
-    transform:translateY(0)
+    transform:translateY(0);
   }
   50%{
-    transform:translateY(-7px)
+    transform:translateY(-7px);
   }
-}
-
-.portrait{
-  animation:softFloat 6s ease-in-out infinite
-}
-
-.ticker-track{
-  animation:tickerMove 26s linear infinite
 }
 
 @keyframes tickerMove{
   from{
-    transform:translateX(0)
+    transform:translateX(0);
   }
   to{
-    transform:translateX(-50%)
+    transform:translateX(-50%);
   }
 }
 
-@media (hover:hover) and (pointer:fine){
-  .highlight:hover strong,
-  .metric:hover strong{
-    transform:scale(1.05)
-  }
-
-  .highlight strong,
-  .metric strong{
-    transition:transform .7s cubic-bezier(.16,1,.3,1)
-  }
-}
-
-
-/* =========================================================
+/* =========================
    RESPONSIVE
-   ========================================================= */
+========================= */
 
 @media(max-width:950px){
 
   .hero{
     grid-template-columns:1fr;
-    gap:48px
+    gap:48px;
   }
 
   .portrait-wrap{
-    max-width:350px
+    max-width:350px;
   }
 
   .section-head{
     grid-template-columns:1fr;
-    gap:16px
+    gap:16px;
   }
 
   .highlights{
-    grid-template-columns:repeat(2,1fr)
+    grid-template-columns:repeat(2,minmax(0,1fr));
   }
 
   .role{
     grid-template-columns:1fr;
-    gap:5px
+    gap:5px;
   }
 
   .project{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
   }
 
   .metric{
     border-left:0;
     border-top:1px solid var(--line);
-    padding:18px 0 0
+    padding:18px 0 0;
+    overflow:visible;
   }
 
   .skillgrid{
-    grid-template-columns:1fr 1fr
+    grid-template-columns:1fr 1fr;
   }
 
   .earlier{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
   }
 
   .contact-grid,
   .education{
-    grid-template-columns:1fr
-  }
-}
-
-@media(max-width:700px){
-
-  .hero-number{
-    font-size:clamp(5rem,20vw,7.5rem) !important
+    grid-template-columns:1fr;
   }
 }
 
 @media(max-width:600px){
 
   .wrap{
-    width:min(var(--max),calc(100% - 32px))
+    width:min(var(--max),calc(100% - 32px));
   }
 
   .links{
-    display:none
+    display:none;
   }
 
   .hero{
-    padding-top:52px
+    padding-top:52px;
   }
 
   .hero h1{
-    font-size:58px
+    font-size:58px;
   }
 
   .highlights{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
   }
 
-  .highlight{
-    min-height:220px
+  .hero-number{
+    font-size:clamp(4.4rem,20vw,7rem)!important;
+  }
+
+  .metric strong{
+    font-size:clamp(3.8rem,18vw,5.5rem);
   }
 
   .skillgrid{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
   }
 
   .contact{
-    padding:40px 25px
+    padding:40px 25px;
   }
 
   .ticker-track{
-    animation-duration:18s
+    animation-duration:18s;
   }
 }
 
 @media(prefers-reduced-motion:reduce){
 
   html{
-    scroll-behavior:auto
+    scroll-behavior:auto;
   }
 
-  .reveal,
-  .metric{
+  .reveal{
     opacity:1;
     transform:none;
-    transition:none
+    transition:none;
   }
 
   .hero h1,
@@ -911,16 +898,8 @@ section{
   .hero .actions,
   .portrait,
   .ticker-track{
-    animation:none
+    animation:none;
   }
-}
-
-footer{
-  padding:38px 0;
-  color:var(--muted);
-  font-size:12px;
-  display:flex;
-  justify-content:space-between
 }
 </style>
 </head>
@@ -930,1394 +909,1351 @@ footer{
 <div class="progress-line" aria-hidden="true"></div>
 
 <header class="wrap">
+  <nav>
+    <a class="brand" href="#top">
+      ADRIC KAM <small>/ APJ GROWTH</small>
+    </a>
 
-<nav>
-
-<a class="brand" href="#top">
-ADRIC KAM <small>/ APJ GROWTH</small>
-</a>
-
-<div class="links">
-<a href="#about">About</a>
-<a href="#experience">Experience</a>
-<a href="#impact">Impact</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
-</div>
-
-</nav>
-
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#impact">Impact</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 </header>
-
 
 <main id="top">
 
-
-<!-- =====================================================
+<!-- =========================
      HERO
-     ===================================================== -->
+========================= -->
 
-<section class="wrap hero" style="border-top:0">
+<section class="wrap hero">
 
-<div class="reveal">
+  <div class="reveal">
 
-<div class="eyebrow">
-Demand Generation · ABM · Digital Media · Field Marketing
-</div>
+    <div class="eyebrow">
+      Demand Generation · ABM · Digital Media · Field Marketing
+    </div>
 
-<h1>
-APJ Growth Across <em>Demand, Digital & Field Marketing</em>
-</h1>
+    <h1>
+      APJ Growth Across
+      <em>Demand, Digital & Field Marketing</em>
+    </h1>
 
-<p class="intro">
-I’m Adric Kam, a B2B marketing leader with 10+ years across APJ. I build regional marketing engines across demand generation, ABM, digital media, field events, PR and localisation — often across multiple markets with lean teams.
-</p>
+    <p class="intro">
+      I’m Adric Kam, a B2B marketing leader with 10+ years across APJ.
+      I build regional marketing engines across demand generation, ABM,
+      digital media, field events, PR and localisation — often across
+      multiple markets with lean teams.
+    </p>
 
-<div class="actions">
+    <div class="actions">
 
-<a class="btn primary" href="#contact">
-Let’s talk ↓
-</a>
+      <a class="btn primary" href="#contact">
+        Let’s talk ↓
+      </a>
 
-<a class="btn" href="https://www.linkedin.com/in/kamadric/" target="_blank" rel="noreferrer">
-LinkedIn ↗
-</a>
+      <a
+        class="btn"
+        href="https://www.linkedin.com/in/kamadric/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        LinkedIn ↗
+      </a>
 
-<a class="btn" href="https://github.com/adric911" target="_blank" rel="noreferrer">
-GitHub ↗
-</a>
+      <a
+        class="btn"
+        href="https://github.com/adric911"
+        target="_blank"
+        rel="noreferrer"
+      >
+        GitHub ↗
+      </a>
 
-</div>
+    </div>
 
-</div>
+  </div>
 
+  <div class="portrait-wrap reveal">
 
-<div class="portrait-wrap reveal">
+    <div class="portrait">
+      <img
+        src="Adric_Website photo.png"
+        alt="Professional portrait of Adric Kam"
+      >
+    </div>
 
-<div class="portrait">
+    <div class="portrait-dot">
+      APJ
+    </div>
 
-<img
-src="Adric_Website photo.png"
-alt="Professional portrait of Adric Kam"
->
+    <div class="portrait-tag">
+      B2B · Regional GTM · Growth
+    </div>
 
-</div>
-
-<div class="portrait-dot">
-APJ
-</div>
-
-<div class="portrait-tag">
-B2B · Regional GTM · Growth
-</div>
-
-</div>
+  </div>
 
 </section>
 
-
-<!-- =====================================================
+<!-- =========================
      TICKER
-     ===================================================== -->
+========================= -->
 
 <div class="ticker">
 
-<div class="ticker-track">
+  <div class="ticker-track">
 
-<span>Demand generation</span>
-<span>Account-based marketing</span>
-<span>Digital media</span>
-<span>Field marketing</span>
-<span>PR & earned media</span>
-<span>APJ market expansion</span>
-<span>AI-enabled operations</span>
-<span>Regional GTM</span>
+    <span>Demand generation</span>
+    <span>Account-based marketing</span>
+    <span>Digital media</span>
+    <span>Field marketing</span>
+    <span>PR & earned media</span>
+    <span>APJ market expansion</span>
+    <span>AI-enabled operations</span>
+    <span>Regional GTM</span>
 
-<span>Demand generation</span>
-<span>Account-based marketing</span>
-<span>Digital media</span>
-<span>Field marketing</span>
+    <span>Demand generation</span>
+    <span>Account-based marketing</span>
+    <span>Digital media</span>
+    <span>Field marketing</span>
+    <span>PR & earned media</span>
+    <span>APJ market expansion</span>
+    <span>AI-enabled operations</span>
+    <span>Regional GTM</span>
+
+  </div>
 
 </div>
 
-</div>
-
-
-<!-- =====================================================
+<!-- =========================
      PROFILE
-     ===================================================== -->
+========================= -->
 
 <section id="about">
 
-<div class="wrap">
+  <div class="wrap">
 
-<div class="section-head reveal">
+    <div class="section-head reveal">
 
-<div class="label">
-01 / Profile
-</div>
+      <div class="label">
+        01 / Profile
+      </div>
 
-<div>
+      <div>
 
-<h2 class="section-title">
-A regional marketer built to operate across markets — without a large team.
-</h2>
+        <h2 class="section-title">
+          A regional marketer built to operate across markets —
+          without a large team.
+        </h2>
 
-<p class="summary">
-Currently the sole regional marketer at adjoe, covering SEA, ANZ, Greater China, Japan and Korea. My work spans demand generation, field events, PR, localisation, paid media and marketing operations, with a direct connection to Sales and pipeline.
-</p>
+        <p class="summary">
+          Currently the sole regional marketer at adjoe, covering SEA,
+          ANZ, Greater China, Japan and Korea. My work spans demand
+          generation, field events, PR, localisation, paid media and
+          marketing operations, with a direct connection to Sales and
+          pipeline.
+        </p>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
+    <div class="highlights">
 
-<div class="highlights">
+      <div class="highlight reveal">
 
+        <strong class="hero-number">
+          <span class="count" data-target="10">10</span>
+          <span class="number-suffix">+</span>
+        </strong>
 
-<!-- 10+ YEARS -->
+        <span>
+          years of B2B, demand generation & regional marketing experience
+        </span>
 
-<div class="highlight reveal">
+      </div>
 
-<strong class="hero-number">
+      <div class="highlight reveal">
 
-<span class="count" data-target="10">
-10
-</span>
+        <strong class="hero-number">
+          <span class="count" data-target="5">5</span>
+        </strong>
 
-<span class="number-suffix">
-+
-</span>
+        <span>
+          APJ markets: SEA, ANZ, Greater China, Japan & Korea
+        </span>
 
-</strong>
+      </div>
 
-<span>
-years of B2B, demand generation & regional marketing experience
-</span>
+      <div class="highlight reveal">
 
-</div>
+        <strong class="hero-number">
+          <span class="static-number">$3M</span>
+        </strong>
 
+        <span>
+          paid media budget managed at Meta
+        </span>
 
-<!-- 5 APJ MARKETS -->
+      </div>
 
-<div class="highlight reveal">
+      <div class="highlight reveal">
 
-<strong class="hero-number">
+        <strong class="hero-number">
+          <span class="static-number">$500K</span>
+        </strong>
 
-<span class="count" data-target="5">
-5
-</span>
+        <span>
+          APJ marketing & events budget owned at adjoe
+        </span>
 
-</strong>
+      </div>
 
-<span>
-APJ markets: SEA, ANZ, Japan, Korea & Greater China
-</span>
+    </div>
 
-</div>
-
-
-<!-- META -->
-
-<div class="highlight reveal">
-
-<strong>
-$3M
-</strong>
-
-<span>
-paid media budget managed at Meta
-</span>
-
-</div>
-
-
-<!-- ADJOE -->
-
-<div class="highlight reveal">
-
-<strong>
-$500K
-</strong>
-
-<span>
-APJ marketing & events budget owned at adjoe
-</span>
-
-</div>
-
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
-
-<!-- =====================================================
+<!-- =========================
      EXPERIENCE
-     ===================================================== -->
+========================= -->
 
 <section id="experience">
 
-<div class="wrap">
+  <div class="wrap">
 
-<div class="section-head reveal">
+    <div class="section-head reveal">
 
-<div class="label">
-02 / Experience
-</div>
+      <div class="label">
+        02 / Experience
+      </div>
 
-<div>
+      <div>
 
-<h2 class="section-title">
-Proven Marketing Strategy Applied Across Different B2B Industries.
-</h2>
+        <h2 class="section-title">
+          Proven Marketing Strategy Applied Across Different B2B Industries.
+        </h2>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
+    <div class="timeline">
 
-<div class="timeline">
+      <!-- adjoe -->
 
+      <div class="role reveal">
 
-<!-- ADJOE -->
+        <div class="date">
+          Nov 2024 – Present<br>
+          Singapore
+        </div>
 
-<div class="role reveal">
+        <div>
 
-<div class="date">
-Nov 2024 – Present<br>
-Singapore
-</div>
+          <h3>
+            Senior Marketing Manager, APAC
+          </h3>
 
-<div>
+          <div class="company">
+            adjoe · AdTech, Hamburg
+          </div>
 
-<h3>
-Senior Marketing Manager, APAC
-</h3>
+          <ul>
 
-<div class="company">
-adjoe · AdTech, Hamburg
-</div>
+            <li>
+              Built adjoe’s APAC marketing engine across SEA, ANZ,
+              Greater China, Japan, and Korea as sole regional marketer,
+              owning a $500K APAC marketing and events budget across
+              demand gen, events, PR, localisation, and paid media.
+            </li>
 
-<ul>
+            <li>
+              Used AI tools (ChatGPT, Claude, Canva AI, Power Automate)
+              to run localisation, content production, and reporting
+              single-handedly, enabling one-person coverage of work that
+              typically requires a full regional team.
+            </li>
 
-<li>
-Built adjoe’s APAC marketing engine across Singapore, China, Japan, and Korea as sole regional marketer, owning a $500K APAC marketing and events budget across demand gen, events, PR, localisation, and paid media.
-</li>
+            <li>
+              Launched Korean, Japanese, and Chinese localised websites —
+              led translation briefing, content adaptation, and
+              market-specific messaging from brief to live.
+            </li>
 
-<li>
-Used AI tools (ChatGPT, Claude, Canva AI, Power Automate) to run localisation, content production, and reporting single-handedly, enabling one-person coverage of work that typically requires a full regional team.
-</li>
+            <li>
+              Ran VIP dinners and conference events end-to-end across
+              Shanghai, Seoul, Singapore, and Tokyo — venue, speakers,
+              guest list, run-of-show, and post-event follow-up.
+            </li>
 
-<li>
-Launched Korean, Japanese, and Chinese localised websites — led translation briefing, content adaptation, and market-specific messaging from brief to live.
-</li>
+            <li>
+              Secured case study coverage in Tech in Asia and regional
+              trade press — built journalist relationships across China,
+              Japan, and Korea from scratch.
+            </li>
 
-<li>
-Ran VIP dinners and conference events end-to-end across Shanghai, Seoul, Singapore, and Tokyo — venue, speakers, guest list, run-of-show, and post-event follow-up.
-</li>
+            <li>
+              Generated pipeline through PR outreach, case study
+              campaigns, ABM targeting, and paid media — all reported
+              back to APAC Sales.
+            </li>
 
-<li>
-Secured case study coverage in Tech in Asia and regional trade press — built journalist relationships across China, Japan, and Korea from scratch.
-</li>
+          </ul>
 
-<li>
-Generated pipeline through PR outreach, case study campaigns, ABM targeting, and paid media — all reported back to APAC Sales.
-</li>
+        </div>
 
-</ul>
+      </div>
 
-</div>
+      <!-- Oxford Economics -->
 
-</div>
+      <div class="role reveal">
 
+        <div class="date">
+          Nov 2023 – Nov 2024<br>
+          Singapore
+        </div>
 
-<!-- OXFORD ECONOMICS -->
+        <div>
 
-<div class="role reveal">
+          <h3>
+            APAC Marketing Lead
+          </h3>
 
-<div class="date">
-Nov 2023 – Nov 2024<br>
-Singapore
-</div>
+          <div class="company">
+            Oxford Economics
+          </div>
 
-<div>
+          <ul>
 
-<h3>
-APAC Marketing Lead
-</h3>
+            <li>
+              Ran full-funnel demand gen across ANZ, SEA, China, Japan,
+              and Korea — ABM, paid media, webinars, and field events
+              aligned to Sales pipeline targets.
+            </li>
 
-<div class="company">
-Oxford Economics
-</div>
+            <li>
+              Launched the Chinese-language website — 30% web traffic
+              uplift and 22% lead gen increase in 6 months.
+            </li>
 
-<ul>
+            <li>
+              Grew APAC demand gen by 15% in 6 months through SEM, SEO,
+              Paid Social, and Display optimisation.
+            </li>
 
-<li>
-Ran full-funnel demand gen across ANZ, SEA, China, Japan, and Korea — ABM, paid media, webinars, and field events aligned to Sales pipeline targets.
-</li>
+            <li>
+              Led AI adoption across the team — embedded ChatGPT,
+              Canva AI, Power Automate, and Salesforce Einstein into
+              workflows, cutting content production time by ~40%.
+            </li>
 
-<li>
-Launched the Chinese-language website — 30% web traffic uplift and 22% lead gen increase in 6 months.
-</li>
+          </ul>
 
-<li>
-Grew APAC demand gen by 15% in 6 months through SEM, SEO, Paid Social, and Display optimisation.
-</li>
+        </div>
 
-<li>
-Led AI adoption across the team — embedded ChatGPT, Canva AI, Power Automate, and Salesforce Einstein into workflows, cutting content production time by ~40%.
-</li>
+      </div>
 
-</ul>
+      <!-- dtcpay -->
 
-</div>
+      <div class="role reveal">
 
-</div>
+        <div class="date">
+          Dec 2022 – Nov 2023<br>
+          Singapore
+        </div>
 
+        <div>
 
-<!-- DTCPAY -->
+          <h3>
+            Marketing Lead
+          </h3>
 
-<div class="role reveal">
+          <div class="company">
+            dtcpay · B2B Fintech Startup
+          </div>
 
-<div class="date">
-Dec 2022 – Nov 2023<br>
-Singapore
-</div>
+          <ul>
 
-<div>
+            <li>
+              First and only marketing hire — built GTM strategy,
+              brand, and digital channels from zero.
+            </li>
 
-<h3>
-Marketing Lead
-</h3>
+            <li>
+              Led the full rebrand from DTC to dtcpay across brand
+              identity, messaging, and channels.
+            </li>
 
-<div class="company">
-dtcpay · B2B Fintech Startup
-</div>
+            <li>
+              Built and launched digital marketing channels — paid,
+              social, and content — as the sole marketing function.
+            </li>
 
-<ul>
+            <li>
+              Grew user acquisition by 20% in 6 months through
+              performance-driven digital campaigns.
+            </li>
 
-<li>
-First and only marketing hire — built GTM strategy, brand, and digital channels from zero.
-</li>
+          </ul>
 
-<li>
-Led the full rebrand from DTC to dtcpay across brand identity, messaging, and channels.
-</li>
+        </div>
 
-<li>
-Built and launched digital marketing channels — paid, social, and content — as the sole marketing function.
-</li>
+      </div>
 
-<li>
-Grew user acquisition by 20% in 6 months through performance-driven digital campaigns.
-</li>
+      <!-- Bitget -->
 
-</ul>
+      <div class="role reveal">
 
-</div>
+        <div class="date">
+          Dec 2021 – Dec 2022<br>
+          Singapore · Remote
+        </div>
 
-</div>
+        <div>
 
+          <h3>
+            Senior Global Digital Marketing Manager
+          </h3>
 
-<!-- BITGET -->
+          <div class="company">
+            Bitget Exchange
+          </div>
 
-<div class="role reveal">
+          <ul>
 
-<div class="date">
-Dec 2021 – Dec 2022<br>
-Singapore · Remote
-</div>
+            <li>
+              Led global digital marketing strategy (SEO, SEM, Social,
+              EDM) across APAC, EMEA, and LATAM markets.
+            </li>
 
-<div>
+            <li>
+              Managed a team of 4 marketers delivering multi-region
+              campaign execution simultaneously.
+            </li>
 
-<h3>
-Senior Global Digital Marketing Manager
-</h3>
+            <li>
+              Directed performance optimisation across regions,
+              aligning strategy to local market conditions.
+            </li>
 
-<div class="company">
-Bitget Exchange
-</div>
+            <li>
+              Collaborated with local country teams to localise
+              campaigns and drive regional user acquisition.
+            </li>
 
-<ul>
+          </ul>
 
-<li>
-Led global digital marketing strategy (SEO, SEM, Social, EDM) across APAC, EMEA, and LATAM markets.
-</li>
+        </div>
 
-<li>
-Managed a team of 4 marketers delivering multi-region campaign execution simultaneously.
-</li>
+      </div>
 
-<li>
-Directed performance optimisation across regions, aligning strategy to local market conditions.
-</li>
+      <!-- Meta -->
 
-<li>
-Collaborated with local country teams to localise campaigns and drive regional user acquisition.
-</li>
+      <div class="role reveal">
 
-</ul>
+        <div class="date">
+          Jul 2021 – Dec 2021<br>
+          Singapore
+        </div>
 
-</div>
+        <div>
 
-</div>
+          <h3>
+            APAC Digital Marketing Manager
+          </h3>
 
+          <div class="company">
+            Meta · Facebook Singapore
+          </div>
 
-<!-- META -->
+          <ul>
 
-<div class="role reveal">
+            <li>
+              Managed APAC demand generation and Always-On campaigns
+              at Meta.
+            </li>
 
-<div class="date">
-Jul 2021 – Dec 2021<br>
-Singapore
-</div>
+            <li>
+              Owned end-to-end campaign planning, agency management,
+              and a $3M paid media budget across paid channels.
+            </li>
 
-<div>
+            <li>
+              Led channel optimisation to improve campaign performance
+              and efficiency.
+            </li>
 
-<h3>
-APAC Digital Marketing Manager
-</h3>
+            <li>
+              Delivered performance reporting and analysis to guide
+              stakeholder decision-making.
+            </li>
 
-<div class="company">
-Meta · Facebook Singapore
-</div>
+          </ul>
 
-<ul>
+        </div>
 
-<li>
-Managed APAC demand generation and Always-On campaigns at Meta.
-</li>
+      </div>
 
-<li>
-Owned end-to-end campaign planning, agency management, and a $3M paid media budget across paid channels.
-</li>
+      <!-- Plaza Premium -->
 
-<li>
-Led channel optimisation to improve campaign performance and efficiency.
-</li>
+      <div class="role reveal">
 
-<li>
-Delivered performance reporting and analysis to guide stakeholder decision-making.
-</li>
+        <div class="date">
+          Aug 2019 – Jul 2021<br>
+          Hong Kong / Singapore
+        </div>
 
-</ul>
+        <div>
 
-</div>
+          <h3>
+            Global Performance Marketing Manager
+          </h3>
 
-</div>
+          <div class="company">
+            Plaza Premium Group
+          </div>
 
+          <ul>
 
-<!-- PLAZA PREMIUM -->
+            <li>
+              Owned $1M+ global digital marketing budget spanning SEM,
+              Programmatic, SEO, Social, and EDM.
+            </li>
 
-<div class="role reveal">
+            <li>
+              Led a team of 3 performance marketers covering Greater
+              China, APAC, and EMEA.
+            </li>
 
-<div class="date">
-Aug 2019 – Jul 2021<br>
-Hong Kong / Singapore
-</div>
+            <li>
+              Ran WeChat, Baidu, and TikTok Ads campaigns natively in
+              Mandarin to drive regional performance.
+            </li>
 
-<div>
+            <li>
+              Directed programmatic and search strategy across Greater
+              China and APAC markets.
+            </li>
 
-<h3>
-Global Performance Marketing Manager
-</h3>
+          </ul>
 
-<div class="company">
-Plaza Premium Group
-</div>
+        </div>
 
-<ul>
+      </div>
 
-<li>
-Owned $1M+ global digital marketing budget spanning SEM, Programmatic, SEO, Social, and EDM.
-</li>
+    </div>
 
-<li>
-Led a team of 3 performance marketers covering Greater China, APAC, and EMEA.
-</li>
+    <!-- Earlier experience -->
 
-<li>
-Ran WeChat, Baidu, and TikTok Ads campaigns natively in Mandarin to drive regional performance.
-</li>
+    <div class="earlier reveal">
 
-<li>
-Directed programmatic and search strategy across Greater China and APAC markets.
-</li>
+      <div class="role">
 
-</ul>
+        <div class="date">
+          Jan 2018 – Aug 2019
+        </div>
 
-</div>
+        <h3>
+          Senior Digital Marketing Executive
+        </h3>
 
-</div>
+        <div class="company">
+          Savills Singapore
+        </div>
 
+      </div>
 
-</div>
+      <div class="role">
 
+        <div class="date">
+          Jan 2014 – Jan 2018
+        </div>
 
-<!-- EARLIER EXPERIENCE -->
+        <h3>
+          Senior Marketing Executive (B2B SaaS)
+        </h3>
 
-<div class="earlier reveal">
+        <div class="company">
+          CyberQuote Pte Ltd
+        </div>
 
+      </div>
 
-<div class="role">
+      <div class="role">
 
-<div class="date">
-Jan 2018 – Aug 2019
-</div>
+        <div class="date">
+          Jan 2013 – Jan 2014
+        </div>
 
-<h3>
-Senior Digital Marketing Executive
-</h3>
+        <h3>
+          Digital Marketing Specialist
+        </h3>
 
-<div class="company">
-Savills Singapore
-</div>
+        <div class="company">
+          Havas Media Group
+        </div>
 
-</div>
+      </div>
 
+    </div>
 
-<div class="role">
-
-<div class="date">
-Jan 2014 – Jan 2018
-</div>
-
-<h3>
-Senior Marketing Executive (B2B SaaS)
-</h3>
-
-<div class="company">
-CyberQuote Pte Ltd
-</div>
-
-</div>
-
-
-<div class="role">
-
-<div class="date">
-Jan 2013 – Jan 2014
-</div>
-
-<h3>
-Digital Marketing Specialist
-</h3>
-
-<div class="company">
-Havas Media Group
-</div>
-
-</div>
-
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
-
-<!-- =====================================================
+<!-- =========================
      IMPACT
-     ===================================================== -->
+========================= -->
 
 <section id="impact">
 
-<div class="wrap">
+  <div class="wrap">
 
-<div class="section-head reveal">
+    <div class="section-head reveal">
 
-<div class="label">
-03 / Impact
-</div>
+      <div class="label">
+        03 / Impact
+      </div>
 
-<div>
+      <div>
 
-<h2 class="section-title">
-Regional growth, measured in outcomes.
-</h2>
+        <h2 class="section-title">
+          Regional growth, measured in outcomes.
+        </h2>
 
-<p class="summary">
-A selection of outcomes from demand generation, digital media, localisation, field marketing and AI-enabled operations.
-</p>
+        <p class="summary">
+          A selection of outcomes from demand generation, digital media,
+          localisation, field marketing and AI-enabled operations.
+        </p>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
+    <div class="projects">
 
-<div class="projects">
+      <div class="project reveal">
 
+        <div>
 
-<div class="project reveal">
+          <h3>
+            APJ marketing engine at adjoe
+          </h3>
 
-<div>
+          <p>
+            Built regional marketing across SEA, ANZ, Greater China,
+            Japan and Korea as a one-person function, connecting demand
+            gen, ABM, paid media, PR, localisation and field events
+            directly to Sales.
+          </p>
 
-<h3>
-APJ marketing engine at adjoe
-</h3>
+        </div>
 
-<p>
-Built regional marketing across Singapore, China, Japan and Korea as a one-person function, connecting demand gen, ABM, paid media, PR, localisation and field events directly to Sales.
-</p>
+        <div class="metric">
 
-</div>
+          <strong>$500K</strong>
 
-<div class="metric">
+          <span>
+            APJ budget owned
+          </span>
 
-<strong>
-$500K
-</strong>
+        </div>
 
-<span>
-APJ budget owned
-</span>
+      </div>
 
-</div>
+      <div class="project reveal">
 
-</div>
+        <div>
 
+          <h3>
+            APJ paid media at Meta
+          </h3>
 
-<div class="project reveal">
+          <p>
+            Owned end-to-end campaign planning, agency management and
+            optimisation across paid channels while managing a
+            significant regional media budget.
+          </p>
 
-<div>
+        </div>
 
-<h3>
-APJ paid media at Meta
-</h3>
+        <div class="metric">
 
-<p>
-Owned end-to-end campaign planning, agency management and optimisation across paid channels while managing a significant regional media budget.
-</p>
+          <strong>$3M</strong>
 
-</div>
+          <span>
+            Paid media budget
+          </span>
 
-<div class="metric">
+        </div>
 
-<strong>
-$3M
-</strong>
+      </div>
 
-<span>
-paid media budget
-</span>
+      <div class="project reveal">
 
-</div>
+        <div>
 
-</div>
+          <h3>
+            Chinese-language market expansion
+          </h3>
 
+          <p>
+            Launched Oxford Economics’ Chinese-language website and
+            connected localisation with regional demand generation.
+          </p>
 
-<div class="project reveal">
+        </div>
 
-<div>
+        <div class="metric">
 
-<h3>
-Chinese-language market expansion
-</h3>
+          <strong>30%</strong>
 
-<p>
-Launched Oxford Economics’ Chinese-language website and connected localisation with regional demand generation.
-</p>
+          <span>
+            Web traffic uplift
+          </span>
 
-</div>
+        </div>
 
-<div class="metric">
+      </div>
 
-<strong>
-30%
-</strong>
+      <div class="project reveal">
 
-<span>
-web traffic uplift
-</span>
+        <div>
 
-</div>
+          <h3>
+            Lead generation acceleration
+          </h3>
 
-</div>
+          <p>
+            Improved APAC lead generation through a combination of
+            localisation, digital acquisition and full-funnel demand
+            generation.
+          </p>
 
+        </div>
 
-<div class="project reveal">
+        <div class="metric">
 
-<div>
+          <strong>22%</strong>
 
-<h3>
-Lead generation acceleration
-</h3>
+          <span>
+            Lead gen increase
+          </span>
 
-<p>
-Improved APAC lead generation through a combination of localisation, digital acquisition and full-funnel demand generation.
-</p>
+        </div>
 
-</div>
+      </div>
 
-<div class="metric">
+      <div class="project reveal">
 
-<strong>
-22%
-</strong>
+        <div>
 
-<span>
-lead gen increase
-</span>
+          <h3>
+            Demand generation optimisation
+          </h3>
 
-</div>
+          <p>
+            Optimised SEM, SEO, Paid Social and Display across APAC
+            while applying GEO to improve content visibility for
+            AI search.
+          </p>
 
-</div>
+        </div>
 
+        <div class="metric">
 
-<div class="project reveal">
+          <strong>15%</strong>
 
-<div>
+          <span>
+            Demand gen growth
+          </span>
 
-<h3>
-Demand generation optimisation
-</h3>
+        </div>
 
-<p>
-Optimised SEM, SEO, Paid Social and Display across APAC while applying GEO to improve content visibility for AI search.
-</p>
+      </div>
 
-</div>
+      <div class="project reveal">
 
-<div class="metric">
+        <div>
 
-<strong>
-15%
-</strong>
+          <h3>
+            AI-enabled marketing operations
+          </h3>
 
-<span>
-demand gen growth
-</span>
+          <p>
+            Embedded ChatGPT, Claude, Canva AI, Power Automate and
+            Salesforce Einstein into localisation, content production,
+            reporting and campaign workflows.
+          </p>
 
-</div>
+        </div>
 
-</div>
+        <div class="metric">
 
+          <strong>~40%</strong>
 
-<div class="project reveal">
+          <span>
+            Faster content production
+          </span>
 
-<div>
+        </div>
 
-<h3>
-AI-enabled marketing operations
-</h3>
+      </div>
 
-<p>
-Embedded ChatGPT, Claude, Canva AI, Power Automate and Salesforce Einstein into localisation, content production, reporting and campaign workflows.
-</p>
+      <div class="project reveal">
 
-</div>
+        <div>
 
-<div class="metric">
+          <h3>
+            GTM & digital acquisition
+          </h3>
 
-<strong>
-~40%
-</strong>
+          <p>
+            Built the marketing function at dtcpay from zero, led the
+            DTC-to-dtcpay rebrand and launched performance-driven
+            digital campaigns.
+          </p>
 
-<span>
-faster content production
-</span>
+        </div>
 
-</div>
+        <div class="metric">
 
-</div>
+          <strong>20%</strong>
 
+          <span>
+            User acquisition growth
+          </span>
 
-<div class="project reveal">
+        </div>
 
-<div>
+      </div>
 
-<h3>
-GTM & digital acquisition
-</h3>
+    </div>
 
-<p>
-Built the marketing function at dtcpay from zero, led the DTC-to-dtcpay rebrand and launched performance-driven digital campaigns.
-</p>
-
-</div>
-
-<div class="metric">
-
-<strong>
-20%
-</strong>
-
-<span>
-user acquisition growth
-</span>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
-
-<!-- =====================================================
+<!-- =========================
      SKILLS
-     ===================================================== -->
+========================= -->
 
 <section id="skills">
 
-<div class="wrap">
+  <div class="wrap">
 
-<div class="section-head reveal">
+    <div class="section-head reveal">
 
-<div class="label">
-04 / Skills
-</div>
+      <div class="label">
+        04 / Skills
+      </div>
 
-<div>
+      <div>
 
-<h2 class="section-title">
-The capabilities behind the regional growth engine.
-</h2>
+        <h2 class="section-title">
+          The capabilities behind the regional growth engine.
+        </h2>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
+    <div class="skillgrid">
 
-<div class="skillgrid">
+      <div class="skill reveal">
 
+        <h3>
+          Marketing Leadership
+        </h3>
 
-<div class="skill reveal">
+        <p>
+          APAC Market Expansion · B2B Marketing · Field Marketing ·
+          Demand Generation · Account-Based Marketing (ABM) · PR &
+          Earned Media · Event Marketing · Localisation (CN/JP/KR) ·
+          Budget Management
+        </p>
 
-<h3>
-Marketing Leadership
-</h3>
+      </div>
 
-<p>
-APAC Market Expansion · B2B Marketing · Field Marketing · Demand Generation · Account-Based Marketing (ABM) · PR & Earned Media · Event Marketing · Localisation (CN/JP/KR) · Budget Management
-</p>
+      <div class="skill reveal">
 
-</div>
+        <h3>
+          MarTech & Analytics
+        </h3>
 
+        <p>
+          HubSpot · Pardot · Marketo · Salesforce · RollWorks ABM ·
+          GA4 · Looker Studio · Power BI · Supermetrics · Google Ads ·
+          LinkedIn Ads · Meta Ads · Baidu · TikTok Ads · WeChat Ads ·
+          SEMrush
+        </p>
 
-<div class="skill reveal">
+      </div>
 
-<h3>
-MarTech & Analytics
-</h3>
+      <div class="skill reveal">
 
-<p>
-HubSpot · Pardot · Marketo · Salesforce · RollWorks ABM · GA4 · Looker Studio · Power BI · Supermetrics · Google Ads · LinkedIn Ads · Meta Ads · Baidu · TikTok Ads · WeChat Ads · SEMrush
-</p>
+        <h3>
+          AI-Enabled Operations
+        </h3>
 
-</div>
+        <p>
+          ChatGPT · Claude · Canva AI · Adobe Firefly · Power Automate ·
+          Zapier AI · Salesforce Einstein · Google Ads AI — AI-assisted
+          localisation, content production, reporting, and campaign
+          optimisation
+        </p>
 
+      </div>
 
-<div class="skill reveal">
+    </div>
 
-<h3>
-AI-Enabled Operations
-</h3>
-
-<p>
-ChatGPT · Claude · Canva AI · Adobe Firefly · Power Automate · Zapier AI · Salesforce Einstein · Google Ads AI — AI-assisted localisation, content production, reporting, and campaign optimisation
-</p>
-
-</div>
-
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
-
-<!-- =====================================================
+<!-- =========================
      EDUCATION
-     ===================================================== -->
+========================= -->
 
 <section>
 
-<div class="wrap">
+  <div class="wrap">
 
-<div class="section-head reveal">
+    <div class="section-head reveal">
 
-<div class="label">
-05 / Education
-</div>
+      <div class="label">
+        05 / Education
+      </div>
 
-<div>
+      <div>
 
-<h2 class="section-title">
-Business, media and marketing technology.
-</h2>
+        <h2 class="section-title">
+          Business, media and marketing technology.
+        </h2>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
+    <div class="education">
 
-<div class="education">
+      <div class="edu-card reveal">
 
+        <strong>
+          MBA
+        </strong>
 
-<div class="edu-card reveal">
+        <span>
+          University of Birmingham · 2019
+        </span>
 
-<strong>
-MBA
-</strong>
+      </div>
 
-<span>
-University of Birmingham · 2019
-</span>
+      <div class="edu-card reveal">
 
-</div>
+        <strong>
+          Certifications
+        </strong>
 
+        <span>
+          Google Search Ads 360 · Google Digital Garage ·
+          HubSpot Academy (SEO) · Data Visualization – Tableau
+        </span>
 
-<div class="edu-card reveal">
+      </div>
 
-<strong>
-Certifications
-</strong>
+      <div class="edu-card reveal">
 
-<span>
-Google Search Ads 360 · Google Digital Garage · HubSpot Academy (SEO) · Data Visualization – Tableau
-</span>
+        <strong>
+          Languages
+        </strong>
 
-</div>
+        <span>
+          English (Native) · Mandarin Chinese (Native) ·
+          Cantonese (Business) · Malay (Business)
+        </span>
 
+      </div>
 
-<div class="edu-card reveal">
+    </div>
 
-<strong>
-Languages
-</strong>
-
-<span>
-English (Native) · Mandarin Chinese (Native) · Cantonese (Business) · Malay (Business)
-</span>
-
-</div>
-
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
-
-<!-- =====================================================
+<!-- =========================
      CONTACT
-     ===================================================== -->
+========================= -->
 
 <section id="contact">
 
-<div class="wrap">
+  <div class="wrap">
 
-<div class="contact reveal">
+    <div class="contact reveal">
 
-<div class="label">
-06 / Contact
-</div>
+      <div class="label">
+        06 / Contact
+      </div>
 
-<h2 class="section-title">
-Building the next APJ growth engine?
-</h2>
+      <h2 class="section-title">
+        Building the next APJ growth engine?
+      </h2>
 
-<p class="summary">
-Open to senior APJ demand generation, field marketing, ABM, digital media and regional marketing opportunities.
-</p>
+      <p class="summary">
+        Open to senior APJ demand generation, field marketing, ABM,
+        digital media and regional marketing opportunities.
+      </p>
 
+      <div class="contact-grid">
 
-<div class="contact-grid">
+        <div class="contact-item reveal">
 
+          <small>
+            Email
+          </small>
 
-<div class="contact-item">
+          <a href="mailto:adricshao1990@gmail.com">
+            adricshao1990@gmail.com
+          </a>
 
-<small>
-Email
-</small>
+        </div>
 
-<a href="mailto:adricshao1990@gmail.com">
-adricshao1990@gmail.com
-</a>
+        <div class="contact-item reveal">
 
-</div>
+          <small>
+            Markets
+          </small>
 
+          <span>
+            SEA · ANZ · Greater China · Japan · Korea
+          </span>
 
-<div class="contact-item">
+        </div>
 
-<small>
-Location
-</small>
+        <div class="contact-item reveal">
 
-<span>
-Singapore
-</span>
+          <small>
+            LinkedIn
+          </small>
 
-</div>
+          <a
+            href="https://www.linkedin.com/in/kamadric/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            linkedin.com/in/kamadric ↗
+          </a>
 
+        </div>
 
-<div class="contact-item">
+      </div>
 
-<small>
-LinkedIn
-</small>
+      <div class="socials">
 
-<a
-href="https://www.linkedin.com/in/kamadric"
-target="_blank"
-rel="noreferrer"
->
-linkedin.com/in/kamadric ↗
-</a>
+        <a
+          class="social"
+          href="https://www.linkedin.com/in/kamadric/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          LinkedIn ↗
+        </a>
 
-</div>
+        <a
+          class="social"
+          href="https://github.com/adric911"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub ↗
+        </a>
 
+      </div>
 
-</div>
+    </div>
 
-
-<div class="socials">
-
-<a
-class="social"
-href="https://www.linkedin.com/in/kamadric"
-target="_blank"
-rel="noreferrer"
->
-LinkedIn ↗
-</a>
-
-<a
-class="social"
-href="https://github.com/adric911"
-target="_blank"
-rel="noreferrer"
->
-GitHub ↗
-</a>
-
-</div>
-
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
-
 </main>
-
 
 <footer class="wrap">
 
-<span>
-© 2026 Adric Kam
-</span>
+  <span>
+    © 2026 Adric Kam
+  </span>
 
-<span>
-APJ Growth · Demand Gen · ABM · Digital Media · Field Marketing
-</span>
+  <span>
+    APJ Growth · Demand Gen · ABM · Digital Media · Field Marketing
+  </span>
 
 </footer>
 
-
-<!-- =====================================================
-     JAVASCRIPT / MOTION
-     ===================================================== -->
-
 <script>
-
 (function(){
 
-const reduce =
-window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reduce =
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-const progress =
-document.querySelector('.progress-line');
+  const progress =
+    document.querySelector('.progress-line');
 
+  function setProgress(){
 
-/* Scroll progress */
+    if(!progress) return;
 
-function setProgress(){
+    const max =
+      document.documentElement.scrollHeight - window.innerHeight;
 
-if(!progress) return;
+    progress.style.width =
+      (max > 0
+        ? (window.scrollY / max) * 100
+        : 0) + '%';
 
-const max =
-document.documentElement.scrollHeight -
-window.innerHeight;
+  }
 
-progress.style.width =
-(max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+  window.addEventListener(
+    'scroll',
+    setProgress,
+    {passive:true}
+  );
 
-}
+  setProgress();
 
-window.addEventListener(
-'scroll',
-setProgress,
-{passive:true}
-);
+  const revealItems =
+    document.querySelectorAll('.reveal');
 
-setProgress();
+  function countUp(
+    el,
+    target,
+    suffix='',
+    duration=1100
+  ){
 
+    if(el.dataset.animated) return;
 
-/* Reveal elements */
+    el.dataset.animated = '1';
 
-const revealItems =
-document.querySelectorAll('.reveal, .metric');
+    const start =
+      performance.now();
 
-if(reduce){
+    const ease =
+      t => 1 - Math.pow(1-t,3);
 
-revealItems.forEach(function(el){
+    function tick(now){
 
-el.classList.add('is-visible');
+      const p =
+        Math.min(
+          1,
+          (now-start)/duration
+        );
 
-});
+      const value =
+        target * ease(p);
 
-return;
+      const display =
+        Number.isInteger(target)
+          ? Math.round(value)
+          : value.toFixed(1).replace(/\.0$/,'');
 
-}
+      el.textContent =
+        display + suffix;
 
+      if(p < 1){
 
-const observer =
-new IntersectionObserver(
+        requestAnimationFrame(tick);
 
-function(entries){
+      }else{
 
-entries.forEach(function(entry){
+        el.textContent =
+          target + suffix;
 
-if(!entry.isIntersecting) return;
+      }
 
-entry.target.classList.add('is-visible');
+    }
 
-animateNumbers(entry.target);
+    requestAnimationFrame(tick);
 
-observer.unobserve(entry.target);
+  }
 
-});
+  if(reduce){
 
-},
+    revealItems.forEach(
+      el => el.classList.add('is-visible')
+    );
 
-{
-threshold:.16,
-rootMargin:'0px 0px -8% 0px'
-}
+    return;
 
-);
+  }
 
+  const observer =
+    new IntersectionObserver(
+      entries => {
 
-revealItems.forEach(function(el){
+        entries.forEach(entry => {
 
-observer.observe(el);
+          if(!entry.isIntersecting)
+            return;
 
-});
+          entry.target.classList.add(
+            'is-visible'
+          );
 
+          animateNumbers(
+            entry.target
+          );
 
-/* Number animation */
+          observer.unobserve(
+            entry.target
+          );
 
-function countUp(
-el,
-target,
-duration=1100
-){
+        });
 
-if(el.dataset.animated) return;
+      },
+      {
+        threshold:.16,
+        rootMargin:'0px 0px -8% 0px'
+      }
+    );
 
-el.dataset.animated='1';
+  revealItems.forEach(
+    el => observer.observe(el)
+  );
 
-const start =
-performance.now();
+  function animateNumbers(scope){
 
-const ease =
-function(t){
+    if(!scope.querySelector)
+      return;
 
-return 1 - Math.pow(1-t,3);
+    /*
+      Only animate the inner .count.
+      This prevents the old nested-counter bug
+      where the parent strong element was replaced.
+    */
 
-};
+    scope
+      .querySelectorAll(
+        '.count[data-target]'
+      )
+      .forEach(el => {
 
+        countUp(
+          el,
+          parseFloat(
+            el.dataset.target
+          )
+        );
 
-function tick(now){
+      });
 
-const progress =
-Math.min(
-1,
-(now-start)/duration
-);
+    /*
+      Impact metrics animate as complete
+      standalone values.
+    */
 
-const value =
-target * ease(progress);
+    if(
+      scope.matches &&
+      scope.matches('.metric')
+    ){
 
-el.textContent =
-Math.round(value);
+      animateStandalone(scope);
 
-if(progress < 1){
+    }
 
-requestAnimationFrame(tick);
+  }
 
-}else{
+  function animateStandalone(card){
 
-el.textContent=target;
+    const strong =
+      card.querySelector('strong');
 
-}
+    if(
+      !strong ||
+      strong.dataset.animated
+    )
+      return;
 
-}
+    const text =
+      strong.textContent.trim();
 
-requestAnimationFrame(tick);
+    const match =
+      text.match(
+        /^([~≈$]?)(\d+(?:\.\d+)?)(.*)$/
+      );
 
-}
+    if(!match)
+      return;
 
+    const prefix =
+      match[1] || '';
 
-/*
-IMPORTANT:
-Only animate the inner .count.
-Do not overwrite the parent <strong>.
-This preserves the + suffix.
-*/
+    const target =
+      parseFloat(match[2]);
 
-function animateNumbers(scope){
+    const suffix =
+      match[3] || '';
 
-const counters =
-scope.querySelectorAll
-?.('.count[data-target]') || [];
+    strong.dataset.animated =
+      '1';
 
-counters.forEach(function(el){
+    const start =
+      performance.now();
 
-countUp(
-el,
-parseFloat(el.dataset.target)
-);
+    const duration =
+      1100;
 
-});
+    const ease =
+      t => 1 - Math.pow(1-t,3);
 
-}
+    function tick(now){
 
+      const p =
+        Math.min(
+          1,
+          (now-start)/duration
+        );
 
-/* Fallback for metric cards */
+      const value =
+        target * ease(p);
 
-function animateStandalone(card){
+      const display =
+        Number.isInteger(target)
+          ? Math.round(value)
+          : value.toFixed(1)
+              .replace(/\.0$/,'');
 
-const strong =
-card.querySelector('strong');
+      strong.textContent =
+        prefix +
+        display +
+        suffix;
 
-if(!strong || strong.dataset.animated)
-return;
+      if(p < 1){
 
-const text =
-strong.textContent.trim();
+        requestAnimationFrame(tick);
 
-const match =
-text.match(/^([~≈$]?)(\d+(?:\.\d+)?)(.*)$/);
+      }else{
 
-if(!match) return;
+        strong.textContent =
+          prefix +
+          target +
+          suffix;
 
-const prefix =
-match[1] || '';
+      }
 
-const target =
-parseFloat(match[2]);
+    }
 
-const suffix =
-match[3] || '';
+    requestAnimationFrame(tick);
 
-strong.dataset.animated='1';
-
-const start =
-performance.now();
-
-const duration =
-1100;
-
-function ease(t){
-
-return 1-Math.pow(1-t,3);
-
-}
-
-function tick(now){
-
-const p =
-Math.min(
-1,
-(now-start)/duration
-);
-
-const value =
-target*ease(p);
-
-const display =
-Number.isInteger(target)
-? Math.round(value)
-: value.toFixed(1).replace(/\.0$/,'');
-
-strong.textContent =
-prefix + display + suffix;
-
-if(p<1){
-
-requestAnimationFrame(tick);
-
-}else{
-
-strong.textContent =
-prefix + target + suffix;
-
-}
-
-}
-
-requestAnimationFrame(tick);
-
-}
-
-
-/*
-Animate standalone metrics when their
-cards enter the viewport.
-*/
-
-document
-.querySelectorAll('.metric')
-.forEach(function(card){
-
-const metricObserver =
-new IntersectionObserver(
-
-function(entries){
-
-entries.forEach(function(entry){
-
-if(!entry.isIntersecting)
-return;
-
-animateStandalone(entry.target);
-
-metricObserver.unobserve(
-entry.target
-);
-
-});
-
-},
-
-{
-threshold:.2
-}
-
-);
-
-metricObserver.observe(card);
-
-});
-
+  }
 
 })();
-
 </script>
 
 </body>
